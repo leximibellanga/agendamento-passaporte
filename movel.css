@@ -1,0 +1,91 @@
+header section div.contacto h2 {
+    font-size: 1.4em;
+}
+
+
+@media screen and (max-width: 930px) {
+    header section div.contacto h2 {
+        display: none;
+    }
+
+    form fieldset.espaco-endereco-actual, form fieldset.espaco-agendamento {
+        display: flex;
+        flex: row wrap;
+    }
+
+    form fieldset.espaco-endereco-actual div, form fieldset.espaco-agendamento div {
+        flex: 1 1 400px;
+    }
+
+    form {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 690px) {
+    header {
+        padding: 20px 10px;
+    }
+}
+
+
+@media screen and (max-width: 610px) {
+    header section div.contacto select {
+        display: none;
+    }
+
+    header section div.logos img {
+        width: 80px;
+    }
+
+    form h1 {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    header button {
+        display: none;
+    }
+
+    /* Trabalhar na dor de cabeca do menu burger */
+    nav {
+        display: none;
+    }
+
+    menu {
+        background-color: rgb(242, 242, 255);
+        margin: 20px -10px -20px;
+        padding: 10px 0px 30px;
+
+        display: none;
+        flex-flow: column nowrap;
+        gap: 10px;
+    }
+
+    menu span {
+        color: rgb(60, 64, 109);
+        padding: 10px 0px 30px;
+    }
+
+    menu a {
+        text-decoration: none;
+        font-size: 1em;
+        color: rgb(0, 81, 255);
+    }
+
+    menu a:hover {
+        color: blue;
+    }
+
+
+    header article {
+        margin: 20px 0px 0px;
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1em;
+    }
+}

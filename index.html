@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-mz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Passaporte</title>
+    <!-- CSS -->
+     <!-- normal -->
+    <link rel="stylesheet" href="style.css">
+     <!-- versao de celular | tablet -->
+    <link rel="stylesheet" href="movel.css" media="screen and (max-width: 992px)">
+    <!-- Pra importar icones externos -->
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- CABECALHO -->
+    <header>
+        <section>
+            <div class="logos">
+                <img src="imagens/logo-sgm.jpg" alt="logotipo do sistema nacional de migracao" style="width: 70px;">
+                <img src="imagens/logo-sigav.jpg" alt="logotipo da sigav">
+            </div>
+
+            <div class="contacto">
+                <h2>Linha verde (90243)</h2>
+                <select name="lingua" id="IDlingua">
+                    <option value="portugues">Portugues</option>
+                    <option value="ingles">Ingles</option>
+                </select>
+                <button>Agendar servico</button>
+                <div>
+                    <a href="#">Log in</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- parte do menu burger -->
+        <article>
+            <div>
+                <span id="botao-burger" onclick="aparecerMenu()">&#9776</span>
+            </div>
+
+            <menu id="menu-burger">
+                <span id="sair-menu" onclick="desaparecerMenu()">x</span>
+                <a href="#"><i class='bx  bx-home-alt-2'></i>Home</a>
+                <a href="#"><i class='bx  bx-calendar-alt'></i>Agendar servico</a>
+                <a href="#"><i class='bx  bx-search'></i>Pesquisar Agendamento</a
+            </menu>
+        </article>
+
+        <nav>
+            <ul>
+                <li><a href="#"><i class='bx  bx-home-alt-2'></i>Home</a></li>
+                <li><a href="#"><i class='bx  bx-calendar-alt'></i>Agendar servico</a></li>
+                <li><a href="#"><i class='bx  bx-search'></i>Pesquisar Agendamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTAINER DO FORMULRIO -->
+    <form action="#" method="post">
+        <h1>Passaporte para nacionais</h1>
+        <!-- DOCUMENTO -->
+        <fieldset class="espaco-documento">
+            <legend>Documento</legend>
+            <!-- campo[0] -->
+            <div class="campo">
+                <label for="IDtipoDoc">TIPO DE DOCUMENTO</label>
+                <select name="tipoDoc" id="IDtipoDoc">
+                    <option value=""></option>
+                    <option value="novo">Novo</option>
+                    <option value="renovacao">Renovação</option>
+                </select>
+                <span>Selecione o tipo de documento (obrigatorio)</span>
+            </div>
+
+            <!-- campo[1] -->
+            <div class="campo">
+                <label for="IDmodalidade">MODALIDADE</label>
+                <select name="modalidade" id="IDmodalidade">
+                    <option value=""></option>
+                    <option value="normal">Normal</option>
+                    <option value="servico">Serviço</option>
+                    <option value="diplomatico">Diplomático</option>
+                </select>
+                <span>Selecione a modalidade que pretende (obrigatorio)</span>
+            </div>
+
+            <!-- campo[2] -->
+            <div class="campo">
+                <label for="IDtaxa">TAXA</label>
+                <select name="taxa" id="IDtaxa">
+                    <option value=""></option>
+                    <option value="normal">Novo</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="expresso">Expresso</option>
+                </select>
+                <span>Selecione a taxa que pretende (obrigatorio)</span>
+            </div>
+        </fieldset>
+
+        <!-- DADOS PESSOAIS -->
+        <fieldset class="espaco-dados-pessoais">
+            <legend>Dados Pessoais</legend>
+            <div class="campo">
+                <label for="IDnome">NOME COMPLETO</label>
+                <input type="text" name="nome" id="IDnome">
+                <span>Forneca o seu nome completo (obrigatorio)</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDapelido">APELIDO</label>
+                <input type="text" name="apelido" id="IDapelido">
+                <span>Forneca o seu apelido (obrigatorio)</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDdataNasc">DATA DE NASCIMENTO</label>
+                <input type="date" name="dataNasc" id="IDdataNasc">
+                <span>Forneca sua data de nascimento (obrigatorio)</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDnrBI">Nº DE BILHETE DE IDENTIFICAÇÃO (B.I.)</label>
+                <input type="text" name="nrBI" id="IDbiBI">
+                <span>Forneca o nº de B.I com 12 digitos e uma letra (obrigatorio)</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDvitalicio">VITALÍCIO</label>
+                <aside>
+                    <input type="radio" name="vitalicio" id="IDvitalicioSim"> <label for="IDvitalicioSim" class="radio">SIM</label>
+                    <input type="radio" name="vitalicio" id="IDvitalicioNao" checked> <label for="IDvitalicioNao" class="radio">NAO</label>
+                </aside>
+                <span>Marque Sim se o seu B.I for vitalico e Nao se nao</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDdataValidadeBI">DATA DE VALIDADE DO B.I</label>
+                <input type="date" name="dataValidadeBI" id="dataValidadeBI">
+                <span>Forneca a data de validade do seu B.I (obrigatorio)</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDlocalEmissao">LOCAL DE EMISSÃO</label>
+                <input type="text" name="localEmissao" id="IDlocalEmissao">
+                <span>Forneca o local de emissao do seu B.I (obrigatorio)</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDpaisNasc">PAÍS DE NASCIMENTO</label>
+                <select name="paisNasc" id="IDpaisNasc">
+                    <option value="" disabled selected></option>
+                    <option value="argelia">Argelia</option>
+                    <option value="botsuwana">Botsuwana</option>
+                    <option value="caboVerde">Cabo verde</option>
+                    <option value="mozambique">Mozambique</option>
+                </select>
+                <span>Selecione o seu pais de nascimento</span>
+            </div>
+        </fieldset>
+
+        <!-- ENDERECO ACTUAL -->
+       <fieldset class="espaco-endereco-actual">
+            <legend>Endereço Actual</legend>
+            <div class="campo">
+                <label for="IDprovincia">PROVÍNCIA</label>
+                <select name="provincia" id="IDprovincia">
+                    <option value=""></option>
+                    <option value="cidade de maputo">Cidade de Maputo</option>
+                    <option value="provincia de maputo">Provincia de Maputo</option>
+                    <option value="gaza">Gaza</option>
+                    <option value="inhambane">Inhambane</option>
+                    <option value="manica">Manica</option>
+                    <option value="sofala">Sofala</option>
+                    <option value="tete">Tete</option>
+                    <option value="zambeze">Zambeze</option>
+                    <option value="nampula">Nampula</option>
+                    <option value="niassa">Niassa</option>
+                    <option value="cabo delgado">Cabo Delgado</option>
+                </select>
+                <span>Seleccione a sua provincia (obrigatorio)</span>
+            </div>
+
+            <div class="campo" id="distrito">
+                <label for="IDdistrito">CIDADE/DISTRITO</label>
+                <select name="distrito" id="IDdistrito">
+                    <option value=""></option>
+                    <!-- vai depender da provincia -->
+                    <option value="boane" class="provincia-maputo">Boane</option>
+                    <option value="nkobe" class="provincia-maputo">Nkobe</option>
+                    <option value="khongolote" class="provincia-maputo">Khongolote</option>
+                    <option value="liberdade" class="provincia-maputo">Liberdade</option>
+                </select>
+            </div>
+
+            <div class="campo" id="bairro">
+                <label for="IDbairro">BAIRRO</label>
+                <input type="text" name="bairro" id="IDbairro">
+                <span>(Opcional)</span>
+            </div>
+         </fieldset>
+
+        <!-- AGENDAMENTO -->
+        <fieldset class="espaco-agendamento">
+            <legend>Agendamento</legend>
+            <div class="campo" id="motivo-viagem">
+                <label for="IDmotivo">MOTIVO DA VIAGEM</label>
+                <input type="text" name="motivo" id="IDmotivo">
+                <span>Escreva de forma resumida o motivo da sua viagem (obrigatorio)</span>
+            </div>
+
+            <div class="campo" id="obs">
+                <label for="IDobservacao">OBSERVACAO</label>
+                <input type="text" name="observacao" id="IDobservacao">
+                <span> </span>
+            </div>
+
+            <div class="campo">
+                <label for="IDlocalTratar">LOCAL ONDE PRETENDE TRATAR O DOCUMENTO</label>
+                <select name="localTratar" id="IDlocalTratar">
+                    <option value=""></option>
+                    <option value="DPM-CIDADE DE MAPUTO">DPM-CIDADE DE MAPUTO</option>
+                    <option value="DPM-MAPUTO PROVINCIA">DPM-MAPUTO PROVINCIA</option>
+                    <option value="DPM-GAZA">DPM-GAZA</option>
+                    <option value="DPM-INHAMBANE">DPM-INHAMBANE</option>
+                    <option value="DPM-MANICA">DPM-MANICA</option>
+                    <option value="DPM-SOFALA">DPM-SOFALA</option>
+                    <option value="DPM-ZAMBEZIA">DPM-ZAMBEZIA</option>
+                    <option value="DPM-TETE">DPM-TETE</option>
+                    <option value="DPM-NAMPULA">DPM-NAMPULA</option>
+                    <option value="DPM-CABO DELGADO">DPM-CABO DELGADO</option>
+                    <option value="DPM-NIASSA">DPM-NIASSA</option>
+                </select>
+                <span>Seleccione o local onde pretende tratar o documento (obrigatorio)</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDdataTratar">DATA NA QUAL PRETENDE TRATAR O DOCUMENTO</label>
+                <input type="date" name="dataTratar" id="IDdataTratar">
+            </div>
+        </fieldset>
+
+        <!-- CONTACTOS -->
+        <fieldset class="espaco-contactos">
+            <legend>Contactos</legend>
+            <div class="campo">
+                <label for="IDcodigoPais">CODIGO DO PAIS</label>
+                <select name="codigoPais" id="IDcodigoPais">
+                    <option value=""></option>
+                    <option value="Mozambique">Mozambique(+258)</option>
+                </select>
+                <span>Seleccione o codigo do pais do seu telemovel</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDtelefone">TELEMOVEL</label>
+                <input type="tel" name="telefone" id="IDtelefone" required>
+                <span>Forneca o seu telemovel (obrigatorio)</span>
+            </div>
+
+            <div class="campo">
+                <label for="IDemail">E-MAIL</label>
+                <input type="email" name="email" id="IDemail">
+                <span>Forneca um email valido (Opcional)</span>
+            </div>
+
+        </fieldset>
+
+        <!-- VERIFICAR ROBO -->
+        <fieldset class="espaco-botoes" id="robo">
+            <article>
+                <input type="checkbox" name="verificarRobo" id="IDverificarRobo"><label for="IDverificarRobo"> Eu nao sou um robô</label>
+            </article>
+        </fieldset>
+
+        <!-- BOTOES -> ENVIAR | LIMPAR | CANCELAR -->
+        <fieldset class="espaco-botoes">
+            <input type="button" value="Cancelar">
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Submeter">
+        </fieldset>
+    </form>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
