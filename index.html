@@ -150,22 +150,140 @@
 
             <div class="campo">
                 <label for="IDpaisNasc">PAÍS DE NASCIMENTO</label>
-                <select name="paisNasc" id="IDpaisNasc">
-                    <option value="" disabled selected></option>
-                    <option value="mocambique">Mocambique</option>
+                <select name="paisNasc" id="IDpaisNasc" required>
+                    <option value="" disabled selected>Selecione um país</option>
+
+                    <optgroup label="África">
+                    <option value="mocambique">Moçambique</option>
                     <option value="angola">Angola</option>
-                    <option value="africa do sul">Africa do Sul</option>
+                    <option value="africa do sul">África do Sul</option>
+                    <option value="nigeria">Nigéria</option>
+                    <option value="egito">Egito</option>
+                    <option value="quenia">Quênia</option>
+                    <option value="marrocos">Marrocos</option>
+                    <option value="etiopia">Etiópia</option>
+                    <option value="cabo verde">Cabo Verde</option>
+                    <option value="tanzania">Tanzânia</option>
+                    </optgroup>
+
+                    <optgroup label="Europa">
+                    <option value="portugal">Portugal</option>
+                    <option value="espanha">Espanha</option>
+                    <option value="franca">França</option>
+                    <option value="alemanha">Alemanha</option>
+                    <option value="italia">Itália</option>
+                    <option value="reino unido">Reino Unido</option>
+                    <option value="suica">Suíça</option>
+                    <option value="holanda">Holanda</option>
+                    <option value="suecia">Suécia</option>
+                    <option value="noruega">Noruega</option>
+                    </optgroup>
+
+                    <optgroup label="Ásia">
+                    <option value="china">China</option>
+                    <option value="japao">Japão</option>
+                    <option value="india">Índia</option>
+                    <option value="coreia do sul">Coreia do Sul</option>
+                    <option value="indonesia">Indonésia</option>
+                    <option value="tailandia">Tailândia</option>
+                    <option value="vietna">Vietnã</option>
+                    <option value="malasia">Malásia</option>
+                    <option value="arabia saudita">Arábia Saudita</option>
+                    <option value="filipinas">Filipinas</option>
+                    </optgroup>
+
+                    <optgroup label="América">
+                    <option value="brasil">Brasil</option>
+                    <option value="estados unidos">Estados Unidos</option>
+                    <option value="canada">Canadá</option>
+                    <option value="mexico">México</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="chile">Chile</option>
+                    <option value="colombia">Colômbia</option>
+                    <option value="peru">Peru</option>
+                    <option value="venezuela">Venezuela</option>
+                    <option value="cuba">Cuba</option>
+                    </optgroup>
+
+                    <optgroup label="Oceania">
+                    <option value="australia">Austrália</option>
+                    <option value="nova zelandia">Nova Zelândia</option>
+                    <option value="fiji">Fiji</option>
+                    <option value="samoa">Samoa</option>
+                    <option value="tonga">Tonga</option>
+                    <option value="papua nova guine">Papua-Nova Guiné</option>
+                    <option value="kiribati">Kiribati</option>
+                    <option value="tuvalu">Tuvalu</option>
+                    <option value="nauru">Nauru</option>
+                    <option value="vanuatu">Vanuatu</option>
+                    </optgroup>
+
+                    <option value="outros">Outros</option>
                 </select>
-                <span>Selecione o seu pais de nascimento</span>
+                <span>Selecione o seu país de nascimento</span>
             </div>
 
             <div class="campo">
                 <label for="IDnacionalidade">NACIONALIDADE</label>
                 <select name="nacionalidade" id="IDnacionalidade" disabled>
                     <option value="" disabled selected></option>
-                    <option value="mocambicano">Mocambicano</option>
-                    <option value="sul africano">Sul Africano</option>
+                    
+                    <option value="mocambicano">Moçambicano</option>
                     <option value="angolano">Angolano</option>
+                    <option value="sul africano">Sul-Africano</option>
+                    <option value="nigeriano">Nigeriano</option>
+                    <option value="egipcio">Egípcio</option>
+                    <option value="marroquino">Marroquino</option>
+                    <option value="queniano">Queniano</option>
+                    <option value="etiope">Etíope</option>
+                    <option value="tanzaniano">Tanzaniano</option>
+                    <option value="cabo-verdiano">Cabo-Verdiano</option>
+
+                    <option value="portugues">Português</option>
+                    <option value="espanhol">Espanhol</option>
+                    <option value="frances">Francês</option>
+                    <option value="alema">Alemão</option>
+                    <option value="italiano">Italiano</option>
+                    <option value="britanico">Britânico</option>
+                    <option value="suico">Suíço</option>
+                    <option value="holandes">Holandês</option>
+                    <option value="sueco">Sueco</option>
+                    <option value="noruegues">Norueguês</option>
+
+                    <option value="chines">Chinês</option>
+                    <option value="japones">Japonês</option>
+                    <option value="indiano">Indiano</option>
+                    <option value="coreano">Coreano</option>
+                    <option value="indonesio">Indonésio</option>
+                    <option value="tailandes">Tailandês</option>
+                    <option value="vietnamita">Vietnamita</option>
+                    <option value="malasio">Malaio</option>
+                    <option value="saudita">Saudita</option>
+                    <option value="filipino">Filipino</option>
+
+                    <option value="brasileiro">Brasileiro</option>
+                    <option value="americano">Americano</option>
+                    <option value="canadense">Canadense</option>
+                    <option value="mexicano">Mexicano</option>
+                    <option value="argentino">Argentino</option>
+                    <option value="chileno">Chileno</option>
+                    <option value="colombiano">Colombiano</option>
+                    <option value="peruano">Peruano</option>
+                    <option value="venezuelano">Venezuelano</option>
+                    <option value="cubano">Cubano</option>
+
+                    <option value="australiano">Australiano</option>
+                    <option value="neozelandes">Neozelandês</option>
+                    <option value="fijiano">Fijiano</option>
+                    <option value="samoano">Samoano</option>
+                    <option value="tonganiano">Tonganiano</option>
+                    <option value="papua">Papua</option>
+                    <option value="kiribatiano">Kiribatiano</option>
+                    <option value="tuvaluano">Tuvaluano</option>
+                    <option value="nauruano">Nauruano</option>
+                    <option value="vanuatense">Vanuatense</option>
+
+                    <option value="outra">Outra</option>
                 </select>
                 <span>Selecione a sua nacionalidade</span>
             </div>
