@@ -56,7 +56,7 @@ header section div.contacto h2 {
     }
 
     menu {
-        background-color: rgb(242, 242, 255);
+        background-color: var(--cor-fundo-menu);
         margin: 20px -10px -20px;
         padding: 10px 0px 30px;
 
@@ -66,20 +66,19 @@ header section div.contacto h2 {
     }
 
     menu span {
-        color: rgb(60, 64, 109);
+        color: var(--cor-secundaria);
         padding: 10px 0px 30px;
     }
 
     menu a {
         text-decoration: none;
         font-size: 1em;
-        color: rgb(0, 81, 255);
+        color: var(--cor-primaria);
     }
 
     menu a:hover {
-        color: blue;
+        color: var(--cor-hover);
     }
-
 
     header article {
         margin: 20px 0px 0px;
