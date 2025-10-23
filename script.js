@@ -12,3 +12,20 @@ function desaparecerMenu() {
     menuBurger.style.display = "none"
     botaoBurger.style.display = "block"
 }
+
+// Nacionalidade aumomaticamente 
+let paisNasc = document.getElementById("IDpaisNasc")
+
+paisNasc.addEventListener("mouseout", function() {
+    // variavel
+    let nacionalidade = document.getElementById("IDnacionalidade")
+
+    // condicoes
+    if (paisNasc.value == "mocambique") {
+        nacionalidade.value = "mocambicano"
+    } else if (paisNasc.value == "angola") {
+        nacionalidade.value = "angolano"
+    } else if (paisNasc.value == "africa do sul") {
+        nacionalidade.value = "sul africano"
+    }
+})
