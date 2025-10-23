@@ -16,7 +16,7 @@ function desaparecerMenu() {
 // Nacionalidade aumomaticamente 
 let paisNasc = document.getElementById("IDpaisNasc")
 
-paisNasc.addEventListener("mouseout", function() {
+paisNasc.addEventListener("click", function() {
     // variavel
     let nacionalidade = document.getElementById("IDnacionalidade")
 
