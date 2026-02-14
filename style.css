@@ -46,6 +46,7 @@ header {
 
     display: flex;
     flex-flow: column nowrap;
+    z-index: 10;
 }
 
 header section {
@@ -146,6 +147,7 @@ header article, menu {
 
 /* container */
 form {
+    position: relative;
     max-width: 1500px;
     margin: 20px auto 50px;
     padding: 20px;
@@ -349,12 +351,85 @@ form fieldset.espaco-botoes input[type="reset"] {
     color: var(--cor-primaria);
 }
 
-form fieldset.espaco-botoes input[type="submit"] {
+form fieldset.espaco-botoes input[type=submit] {
     background-color: var(--cor-primaria);
 }
 
 form fieldset.espaco-botoes input:hover {
     opacity: 60%;
+}
+
+
+/* CONFIRMACAO */
+section#caixa-confiramacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    z-index: 1002;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    aside {
+        width: 450px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, .4);
+        line-height: 1.5;
+        color: #333;
+        z-index: 101;
+        font-size: 0.9em;
+        overflow: hidden;
+
+        display: flex;
+        flex-flow: column nowrap;
+
+        ul {
+            list-style-position: inside;
+
+            li {
+                padding-left: 20px;
+            }
+        }
+
+        div {
+            background-color: rgba(209, 209, 236, 0.329);
+            padding: 10px 16px;
+            margin: 20px -10px -10px;
+
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                padding: 8px 16px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                color: #fff;
+                font-weight: 600;
+            }
+
+            input[type=button] {
+                background-color: red;
+
+                &:hover {
+                    background-color: rgb(182, 0, 0);
+                }
+            }
+            input[type=submit] {
+                background-color: green;
+
+                &:hover {
+                    background-color: rgb(0, 171, 0);
+                }
+            }
+        }
+    }
 }
 
 

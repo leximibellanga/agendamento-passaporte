@@ -146,3 +146,25 @@ paisNasc.addEventListener("change", function() {
         nacionalidade.value = "";
     }
 });
+
+// CONFIRMACAO DO AGENDAMENTO
+function popupConfirmar() {
+    let confirmacao = document.getElementById("caixa-confiramacao")
+    confirmacao.style.display = "flex"
+
+    let nome = document.getElementById("IDnome").value
+    let tipoDoc = document.getElementById("IDtipoDoc").value
+    let dataTratar = document.getElementById("IDdataTratar").value
+    let localTratar = document.getElementById("IDlocalTratar").value
+    let listaDados = document.querySelectorAll("section > aside > ul > li")
+
+    listaDados[0].innerHTML += `<strong>${nome}</strong>`
+    listaDados[1].innerHTML += `<strong>${tipoDoc}</strong>`
+    listaDados[2].innerHTML += `<strong>${dataTratar}</strong>`
+    listaDados[3].innerHTML += `<strong>${localTratar}</strong>`
+}
+
+function popupCancelar() {
+    let confirmacao = document.getElementById("caixa-confiramacao")
+    confirmacao.style.display = "none"
+}
