@@ -168,3 +168,19 @@ function popupCancelar() {
     let confirmacao = document.getElementById("caixa-confiramacao")
     confirmacao.style.display = "none"
 }
+
+
+
+// ABRIR POPUP DE LOGIN 
+const popupLogin = document.querySelector('.popup-login')
+const btnFecharLogin = document.querySelector('.btn-fechar-login')
+const btnLogin = document.querySelector('#btn-login')
+
+btnLogin.addEventListener('click', () => {
+    popupLogin.style.display = "flex";
+})
+
+btnFecharLogin.addEventListener('click', () => {
+    popupLogin.style.display = "none"
+})
+

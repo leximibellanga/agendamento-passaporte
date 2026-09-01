@@ -14,6 +14,25 @@
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
 </head>
 <body>
+     <!-- POPUP DE LOGIN -->
+    <section class="popup-login">
+        <form class="form-login">
+            <span class="btn-fechar-login">❌</span>
+            <div>
+                <h3>Login</h3>
+            </div>
+            <div>
+                <label for="email">Email/Telefone</label>
+                <input type="email" name="email" id="email" placeholder="Email ou Numero de celular">
+            </div>
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Sua senha">
+            </div>
+            <button>Entrar</button>
+        </form>
+    </section>
+
     <!-- CABECALHO -->
     <header>
         <section>
@@ -30,7 +49,7 @@
                 </select>
                 <button>Agendar servico</button>
                 <div>
-                    <a href="#">Log in</a>
+                    <a href="#" id="btn-login">Log in</a>
                 </div>
             </div>
         </section>
@@ -596,8 +615,6 @@
             </aside>
         </section>
     </form>
-
-
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
